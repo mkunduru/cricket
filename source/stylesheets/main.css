@@ -60,11 +60,47 @@ p {
 								#8FD899 36.7%, #8FD899 46.7%, 
 								#92EF9F 46.7%, #92EF9F 61.7%,  
 								#8FD899 61.7% );
-	height: 1271px;	
+	height: 75vh;
+	position: relative;
+	width: 75vh;
 }
 
+.field-pitch {
+	background-image: url("/images/field.svg");
+	/*background-position: center;*/
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	height: 75vh;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+}
 
+.field-path {
+	background-image: url("/images/path-googly.svg");
+	/*background-position: center;*/
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	height: 75vh;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+}
 
+.field-ball {
+	background-color: #ff5b5b;
+	border-radius: 50%;
+	top: 81%;
+	height: 5vh;
+	left: 26%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	width: 5vh;
+	z-index: 10;
+	/*transform: translateX(-265%);*/
+}
 
 
 
