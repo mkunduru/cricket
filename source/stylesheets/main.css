@@ -1,0 +1,78 @@
+#container {
+	width: 1440px;
+	margin: 0 auto;
+}
+
+.top-section {
+	background-color: #729FFF;
+}
+
+h1 {
+	font: 400 140px/170px 'Limelight', cursive;
+	color: #FFAD94;
+	margin: 0px;
+	text-align: center;
+	padding-top: 293px;
+}
+
+h4 {
+	font: 400 32px/44px 'Montserrat', sans-serif;
+	color: #FFFFFF;
+	letter-spacing: 8px;
+	margin: 0px;
+	text-align: center;
+	width: 377px;
+	padding-left: 532px;
+	padding-bottom: 107px;
+}
+
+.diagonal {
+	background: linear-gradient(to left bottom, #729FFF 49.9%, #fff 50.1% );
+	height: 264px;
+}
+
+h5{
+	font: 700 24px/29px 'Montserrat', sans-serif;
+	color: #729FFF;
+	margin: 137px 0 6px 505px;
+}
+
+h2 {
+	font: 700 72px/88px 'Montserrat', sans-serif;
+	color: #729FFF;
+	margin: 0 502px;
+}
+
+p {
+	font: 700 24px/29px 'Montserrat', sans-serif;
+	color: #729FFF;
+	width: 461px;
+	margin: 0 0 130px 502px;
+	
+}
+
+.field {
+	background: linear-gradient(to bottom, #92EF9F 4.5%, 
+								#8FD899 4.5%, #8FD899 11.2%, 
+								#92EF9F 11.2%, #92EF9F 18.2%,
+								#8FD899 18.2%, #8FD899 25.2%, 
+								#92EF9F 25.2%, #92EF9F 36.7%, 
+								#8FD899 36.7%, #8FD899 46.7%, 
+								#92EF9F 46.7%, #92EF9F 61.7%,  
+								#8FD899 61.7% );
+	height: 1271px;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
