@@ -89,17 +89,68 @@ p {
 	z-index: 10;
 }
 
+@keyframes bowl {
+  0% {
+    left: 26%;
+    animation-timing-function: ease-out;
+  }
+  32% {
+    left: 20%;
+    animation-timing-function: ease-in;
+  }
+  75% {
+    left: 32%;
+    animation-timing-function: ease-out;
+  }
+82% {
+    left: 25%;
+    animation-timing-function: ease-in-out;
+  }  
+  100% {
+    left: 40%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 81%;
+  }
+  75% {
+    top: 31%;
+  }
+  100% {
+    top: 11%;
+  }
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0) scale(1);
+	}
+	75% {
+		transform: rotate(360deg) scale(0.7);
+	}
+	100% {
+		transform: rotate(0) scale(0.6);
+	}
+}
+
 .field-ball {
+	/*transform: translateX(-265%);*/
+	animation-duration: 3s;
+	animation-iteration-count: 3;
+	animation-name: bounce, bowl, spin;
 	background-color: #ff5b5b;
+	background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), red 50%) red;
 	border-radius: 50%;
-	top: 81%;
 	height: 5vh;
 	left: 26%;
 	position: absolute;
+	top: 81%;
 	transform: translate(-50%, -50%);
 	width: 5vh;
 	z-index: 10;
-	/*transform: translateX(-265%);*/
+	
 }
 
 
