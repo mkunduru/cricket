@@ -167,13 +167,63 @@ h4 {
 	z-index: 9;
 }
 
+/*
+======================================== 
+Off Spin 
+========================================
+*/
+/*
 
 /* Delivery */
+@keyframes bowl1 {
+	0% {
+		left: 26%;
+		animation-timing-function: ease-out;
+	}
+	75% {
+		left: 36%;
+		animation-timing-function: ease-out;
+	}
+	100% {
+		left: 46%;
+	}
+}
 
+@keyframes bounce1 {
+  0% {
+    top: 81%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    top: 25%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    top: 1%;
+  }
+}
 
 .delivery {
   margin: 0 auto;
   width: 480px;
+@keyframes shadow1 {
+	0% {
+		opacity: 1;
+		filter: blur(7px);
+		transform: translateY(2000%);
+		animation-timing-function: ease-out;
+	}
+	75% {
+		opacity: 1;
+		filter: blur(1px);
+		transform: translateY(-25%);
+		animation-timing-function: ease-out;
+	}
+	100% {
+		opacity: 1;
+		filter: blur(4px);
+		transform: translateY(1000%);
+	}
 }
 
 .delivery-count {
@@ -182,19 +232,145 @@ h4 {
   margin: 0;
   padding: 0;
   width: 480px;
+.field-ball {
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-name: bounce1, bowl1, spin;
+	background-color: #ff5b5b;
+	background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), red 50%) red;
+	border-radius: 50%;
+	height: 5vh;
+	left: 26%;
+	position: absolute;
+	top: 81%;
+	transform: translate(-50%, -50%);
+	width: 5vh;
+	z-index: 10;
 }
 .delivery-desc {
 	color: #729FFF;
 	font: 700 24px/1.4 'Montserrat', sans-serif;
   margin-bottom: 4em;
   margin-top: 0;
+
+.field-ball::before {
+	animation-timing-function: cubic-bezier(1,0,0.27,1);
+	animation-name: shadow1;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+	content: "";
+	filter: blur(3px);
+	height: 25%;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	z-index: 9;
+}
+
+*/
+/*
+======================================== 
+Leg Spin 
+========================================
+*/
+
+
+/*
+@keyframes bowl2 {
+	0% {
+		left: 26%;
+		animation-timing-function: ease-out;
+	}
+	75% {
+		left: 50%;
+		animation-timing-function: ease-out;
+	}
+	100% {
+		left: 44%;
+	}
+}
+
+@keyframes bounce2 {
+  0% {
+    top: 81%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    top: 25%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    top: 1%;
+  }
 }
 .delivery-name {
 	font: 700 72px/88px 'Montserrat', sans-serif;
 	color: #729FFF;
   margin: 0;
   text-transform: uppercase;
+
+@keyframes shadow2 {
+	0% {
+		opacity: 1;
+		filter: blur(7px);
+		transform: translateY(2000%);
+		animation-timing-function: ease-out;
+	}
+	75% {
+		opacity: 1;
+		filter: blur(1px);
+		transform: translateY(-25%);
+		animation-timing-function: ease-out;
+	}
+	100% {
+		opacity: 1;
+		filter: blur(4px);
+		transform: translateY(1000%);
+	}
 }
+
+.field-ball {
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-name: bounce2, bowl2, spin;
+	background-color: #ff5b5b;
+	background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), red 50%) red;
+	border-radius: 50%;
+	height: 5vh;
+	left: 26%;
+	position: absolute;
+	top: 81%;
+	transform: translate(-50%, -50%);
+	width: 5vh;
+	z-index: 10;
+}
+
+.field-ball::before {
+	animation-timing-function: cubic-bezier(1,0,0.27,1);
+	animation-name: shadow2;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+	content: "";
+	filter: blur(3px);
+	height: 25%;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	z-index: 9;
+}
+*/
+
+/*
+======================================== 
+Doosra
+========================================
+*/
 
 /* Slider */
 .slider {
@@ -261,4 +437,193 @@ h4 {
 }
 .slider-nav-next img {
   transform: translateX(-100%) scaleX(-1);
+/*
+
+@keyframes bowl3 {
+	0% {
+		left: 26%;
+		animation-timing-function: ease-out;
+	}
+	75% {
+		left: 36%;
+		animation-timing-function: ease-out;
+	}
+	100% {
+		left: 33%;
+	}
 }
+
+@keyframes bounce3 {
+  0% {
+    top: 81%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    top: 25%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow3 {
+	0% {
+		opacity: 1;
+		filter: blur(7px);
+		transform: translateY(2000%);
+		animation-timing-function: ease-out;
+	}
+	75% {
+		opacity: 1;
+		filter: blur(1px);
+		transform: translateY(-25%);
+		animation-timing-function: ease-out;
+	}
+	100% {
+		opacity: 1;
+		filter: blur(4px);
+		transform: translateY(1000%);
+	}
+}
+
+.field-ball {
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-name: bounce3, bowl3, spin;
+	background-color: #ff5b5b;
+	background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), red 50%) red;
+	border-radius: 50%;
+	height: 5vh;
+	left: 26%;
+	position: absolute;
+	top: 81%;
+	transform: translate(-50%, -50%);
+	width: 5vh;
+	z-index: 10;
+}
+
+.field-ball::before {
+	animation-timing-function: cubic-bezier(1,0,0.27,1);
+	animation-name: shadow3;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+	content: "";
+	filter: blur(3px);
+	height: 25%;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	z-index: 9;
+}
+
+*/
+
+/*
+======================================== 
+Yorker
+========================================
+*/
+
+
+@keyframes bowl4 {
+	0% {
+		left: 26%;
+	}
+	90% {
+		left: 46%;
+	}
+	100% {
+		left: 46%;
+	}
+}
+
+@keyframes bounce4 {
+  0% {
+    top: 81%;
+  }
+  90% {
+    top: 10%;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow4 {
+	0% {
+		opacity: 1;
+		filter: blur(6px);
+		transform: translateY(2000%);
+	}
+	90% {
+		opacity: 1;
+		filter: blur(1px);
+		transform: translateY(-25%);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(2px);
+		transform: translateY(100%);
+	}
+}
+
+@keyframes spin4 {
+	0% {
+		transform: scale(1);
+	}
+	90% {
+		transform: scale(0.4);
+	}
+	100% {
+		transform: scale(0.3);
+	}
+}
+
+.field-ball {
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-name: bounce4, bowl4, spin4;
+	background-color: #ff5b5b;
+	background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), red 50%) red;
+	border-radius: 50%;
+	height: 5vh;
+	left: 26%;
+	position: absolute;
+	top: 81%;
+	transform: translate(-50%, -50%);
+	width: 5vh;
+	z-index: 10;
+}
+
+.field-ball::before {
+	animation-timing-function: cubic-bezier(1,0,0.27,1);
+	animation-name: shadow4;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+	content: "";
+	filter: blur(3px);
+	height: 25%;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	z-index: 9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
