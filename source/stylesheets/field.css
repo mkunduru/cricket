@@ -1,6 +1,6 @@
 .field {
 	height: 75vh;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	position: relative;
 	width: 75vh;
 }
@@ -14,7 +14,7 @@
 								#8FD899 36.7%, #8FD899 46.7%, 
 								#92EF9F 46.7%, #92EF9F 61.7%,  
 								#8FD899 61.7% );
-	
+
 }
 
 .field-pitch {
@@ -58,8 +58,6 @@
 }
 
 .field-ball::before {
-	animation-timing-function: cubic-bezier(1,0,0.27,1);
-	animation-name: shadow;
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
 	background-color: rgba(0,0,0,0.5);
@@ -73,6 +71,9 @@
 	width: 100%;
 	z-index: 9;
 }
+
+
+
 
 /* 1. Offspin */
 
@@ -88,6 +89,33 @@
 	top: 6%;
 }
 
+.field__offspin .field-ball::before {
+	animation-name: shadow-offspin;
+	animation-timing-function: cubic-bezier(1,0,0.27,1);
+	animation-duration: 3s;
+
+}
+
+@keyframes shadow-offspin {
+		0% {
+		opacity: 1;
+		filter: blur(7px);
+		transform: translateY(2000%);
+		animation-timing-function: ease-out;
+	}
+	75% {
+		opacity: 1;
+		filter: blur(1px);
+		transform: translateY(-25%);
+		animation-timing-function: ease-out;
+	}
+	100% {
+		opacity: 1;
+		filter: blur(4px);
+		transform: translateY(1000%);
+	}
+
+}
 
 /* 2. Googly */
 

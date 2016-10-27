@@ -40,7 +40,6 @@ var fieldOffspin = document.querySelector('.field__offspin .field-ball');
 var timingOffspin = {
   duration: 3000,
   iterations: Infinity,
-  fill: 'both',
   easing: 'ease-out'
 };
 
