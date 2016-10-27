@@ -29,3 +29,37 @@ $(document).ready(function() {
     }, 200);
   });
 });
+
+/**
+ * @section Path Animation
+ */
+
+/* Offspin */
+
+var fieldOffspin = document.querySelector('.field__offspin .field-ball');
+var timingOffspin = {
+  duration: 3000,
+  iterations: Infinity,
+  fill: 'both',
+  easing: 'ease-out'
+};
+
+fieldOffspin.animate([
+  { motionOffset: 0, motionRotation: '0deg' },
+  { motionOffset: '100%', motionRotation: '0deg' }
+], timingOffspin);
+
+/* Googly */
+
+var fieldGoogly = document.querySelector('.field__googly .field-ball');
+var timingGoogly = {
+  duration: 3000,
+  iterations: Infinity,
+  fill: 'both',
+  easing: 'ease-in-out'
+};
+
+fieldGoogly.animate([
+  { motionOffset: 0, motionRotation: '0deg' },
+  { motionOffset: '100%', motionRotation: '0deg' }
+], timingGoogly);

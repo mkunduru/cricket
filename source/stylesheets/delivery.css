@@ -1,0 +1,26 @@
+.delivery {
+  margin: 0 auto;
+  width: 480px;
+}
+
+.delivery-count {
+	font: 700 24px/1 'Montserrat', sans-serif;
+	color: #729FFF;
+  margin: 0;
+  padding: 0;
+  width: 480px;
+}
+
+.delivery-name {
+	font: 700 72px/88px 'Montserrat', sans-serif;
+	color: #729FFF;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.delivery-desc {
+	color: #729FFF;
+	font: 700 24px/1.4 'Montserrat', sans-serif;
+  margin-bottom: 4em;
+  margin-top: 0;
+}

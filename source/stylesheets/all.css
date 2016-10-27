@@ -1,7 +1,23 @@
 @charset "utf-8";
+
+/* Reset */
+
 @import "normalize.css";
+
+/* Fonts */
+
 @import 'https://fonts.googleapis.com/css?family=Limelight';
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
-@import 'slick.css';
+
+/* Main styles */
+
 @import "main.css";
+
+@import "delivery.css";
+@import "field.css";
+@import "slider.css";
+
+/* Vendor */
+
+@import 'slick.css';

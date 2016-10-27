@@ -1,0 +1,114 @@
+.field {
+	height: 75vh;
+	margin: 0 auto;
+	position: relative;
+	width: 75vh;
+}
+
+.field-bg {
+	background: linear-gradient(to bottom, #92EF9F 4.5%, 
+								#8FD899 4.5%, #8FD899 11.2%, 
+								#92EF9F 11.2%, #92EF9F 18.2%,
+								#8FD899 18.2%, #8FD899 25.2%, 
+								#92EF9F 25.2%, #92EF9F 36.7%, 
+								#8FD899 36.7%, #8FD899 46.7%, 
+								#92EF9F 46.7%, #92EF9F 61.7%,  
+								#8FD899 61.7% );
+	
+}
+
+.field-pitch {
+	background-image: url("../images/field.svg");
+	/*background-position: center;*/
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	height: 75vh;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+}
+
+.field-path {
+	/*background-position: center;*/
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	height: 75vh;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+}
+
+.field-ball {
+	/*transform: translateX(-265%);*/
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-name: bounce, bowl, spin;
+	background-color: #ff5b5b;
+	background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), red 50%) red;
+	border-radius: 50%;
+	height: 5vh;
+	left: 0%;
+	position: absolute;
+	top: 0%;
+	transform: translate(-50%, -50%);
+	width: 5vh;
+	z-index: 10;
+}
+
+.field-ball::before {
+	animation-timing-function: cubic-bezier(1,0,0.27,1);
+	animation-name: shadow;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+	content: "";
+	filter: blur(3px);
+	height: 25%;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	z-index: 9;
+}
+
+/* 1. Offspin */
+
+.field__offspin .field-path {
+	background-image: url("../images/path-off-spin.svg");
+}
+.field__offspin .field-pitch {
+
+}
+.field__offspin .field-ball {
+	motion-path: path("M197.5,413.2c0,0-98.5-333.2,15.3-241.1C156,31,256,53.6,256,53.6");
+	left: 8%;
+	top: 6%;
+}
+
+
+/* 2. Googly */
+
+.field__googly .field-path {
+
+}
+.field__googly .field-pitch {
+
+}
+.field__googly .field-ball {
+
+}
+
+/* 2. Left-arm */
+
+.field__leftarm .field-path {
+
+}
+.field__leftarm .field-pitch {
+
+}
+.field__leftarm .field-ball {
+
+}
