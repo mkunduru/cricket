@@ -1,10 +1,15 @@
-#container {
-	width: 1440px;
+.container {
 	margin: 0 auto;
+	max-width: 1440px;
 }
 
 .top-section {
 	background-color: #729FFF;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
 }
 
 h1 {
@@ -12,18 +17,22 @@ h1 {
 	color: #FFAD94;
 	margin: 0px;
 	text-align: center;
-	padding-top: 293px;
 }
 
 h4 {
-	font: 400 32px/44px 'Montserrat', sans-serif;
 	color: #FFFFFF;
-	letter-spacing: 8px;
-	margin: 0px;
 	text-align: center;
-	width: 377px;
-	padding-left: 532px;
-	padding-bottom: 107px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  line-height: 1.375;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-top: 0;
+  margin-right: auto;
+  text-transform: uppercase;
+  width: 12em;
 }
 
 .diagonal {
