@@ -1,6 +1,6 @@
 .delivery {
   margin: 0 auto;
-  width: 480px;
+  width: 540px;
 }
 
 .delivery-count {
@@ -8,7 +8,7 @@
 	color: #729FFF;
   margin: 0;
   padding: 0;
-  width: 480px;
+  width: 540px;
 }
 
 .delivery-name {
@@ -21,6 +21,742 @@
 .delivery-desc {
 	color: #729FFF;
 	font: 700 24px/1.4 'Montserrat', sans-serif;
-  margin-bottom: 4em;
-  margin-top: 0;
+  margin: 0 0 4em 0;
+}
+
+/*
+======================================== 
+Common Delivery Styles
+========================================
+*/
+
+@keyframes spin {
+  0% {
+    transform: /*rotate(0)*/ scale(1);
+  }
+  75% {
+    transform: /*rotate(2160deg)*/ scale(0.6);
+  }
+  100% {
+    transform: /*rotate(0)*/ scale(0.4);
+  }
+}
+
+.field-ball {
+  animation-iteration-count: infinite;
+  background-color: #ff5b5b;
+  background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), red 50%) red;
+  border-radius: 50%;
+  height: 5vh;
+  left: 26%;
+  position: absolute;
+  top: 81%;
+  transform: translate(-50%, -50%);
+  width: 5vh;
+  z-index: 10;
+}
+
+.field-ball::before {
+  animation-timing-function: cubic-bezier(1,0,0.27,1);
+  animation-iteration-count: infinite;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  content: "";
+  filter: blur(3px);
+  height: 25%;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 9;
+}
+
+
+
+
+/*
+======================================== 
+Off Spin 
+========================================
+*/
+
+
+@keyframes bowl_offspin {
+  0% {
+    left: 26%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    left: 36%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    left: 46%;
+  }
+}
+
+@keyframes bounce_offspin {
+  0% {
+    top: 81%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    top: 25%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow_offspin {
+  0% {
+    opacity: 1;
+    filter: blur(7px);
+    transform: translateY(2000%);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-25%);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(4px);
+    transform: translateY(1000%);
+  }
+}
+
+.field__offspin .field-ball {
+  animation-duration: 3s;
+  animation-name: bounce_offspin, bowl_offspin, spin;
+}
+
+.field__offspin .field-ball::before {
+  animation-name: shadow_offspin;
+  animation-duration: 3s;
+}
+
+
+/*
+======================================== 
+Leg Spin 
+========================================
+*/
+
+@keyframes bowl_legspin {
+  0% {
+    left: 26%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    left: 50%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    left: 44%;
+  }
+}
+
+@keyframes bounce_legspin {
+  0% {
+    top: 81%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    top: 25%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow_legspin {
+  0% {
+    opacity: 1;
+    filter: blur(7px);
+    transform: translateY(2000%);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-25%);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(4px);
+    transform: translateY(1000%);
+  }
+}
+
+.field__legspin .field-ball {
+  animation-duration: 3s;
+  animation-name: bounce_legspin, bowl_legspin, spin;
+}
+
+.field__legspin .field-ball::before {
+  animation-name: shadow_legspin;
+  animation-duration: 3s;
+}
+
+
+/*
+======================================== 
+Doosra
+========================================
+*/
+
+@keyframes bowl_doosra {
+  0% {
+    left: 26%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    left: 36%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    left: 33%;
+  }
+}
+
+@keyframes bounce_doosra {
+  0% {
+    top: 81%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    top: 25%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow_doosra {
+  0% {
+    opacity: 1;
+    filter: blur(7px);
+    transform: translateY(2000%);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-25%);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(4px);
+    transform: translateY(1000%);
+  }
+}
+
+.field__doosra .field-ball {
+  animation-duration: 3s;
+  animation-name: bounce_doosra, bowl_doosra, spin;
+}
+
+.field__doosra .field-ball::before {
+  animation-name: shadow_doosra;
+  animation-duration: 3s;
+}
+
+
+/*
+======================================== 
+Top spinner
+========================================
+*/
+
+@keyframes bowl_topspinner {
+  0% {
+    left: 26%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    left: 40%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    left: 44%;
+  }
+}
+
+@keyframes bounce_topspinner {
+  0% {
+    top: 81%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    top: 30%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow_topspinner {
+  0% {
+    opacity: 1;
+    filter: blur(7px);
+    transform: translateY(2000%);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-25%);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(4px);
+    transform: translateY(1500%);
+  }
+}
+
+.field__topspinner .field-ball {
+  animation-duration: 3s;
+  animation-name: bounce_topspinner, bowl_topspinner, spin;
+}
+
+.field__topspinner .field-ball::before {
+  animation-name: shadow_topspinner;
+  animation-duration: 3s;
+}
+
+
+/*
+======================================== 
+Slider
+========================================
+*/
+
+@keyframes bowl_slider {
+  0% {
+    left: 26%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    left: 40%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    left: 44%;
+  }
+}
+
+@keyframes bounce_slider {
+  0% {
+    top: 81%;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    top: 15%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow_slider {
+  0% {
+    opacity: 1;
+    filter: blur(7px);
+    transform: translateY(2000%);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-25%);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(4px);
+    transform: translateY(200%);
+  }
+}
+
+.field__slider .field-ball {
+  animation-duration: 3s;
+  animation-name: bounce_slider, bowl_slider, spin;
+}
+
+.field__slider .field-ball::before {
+  animation-name: shadow_slider;
+  animation-duration: 3s;
+}
+
+
+/*
+======================================== 
+Bouncer
+========================================
+*/
+
+
+@keyframes bowl_bouncer {
+  0% {
+    left: 26%;
+  }
+  40% {
+    left: 36%;
+  }
+  100% {
+    left: 46%;
+  }
+}
+
+@keyframes bounce_bouncer {
+  0% {
+    top: 81%;
+  }
+  40% {
+    top: 35%;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow_bouncer {
+  0% {
+    opacity: 1;
+    filter: blur(6px);
+    transform: translateY(2000%);
+  }
+  35% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-25%);
+  }
+  80% {
+    opacity: 1;
+    filter: blur(6px);
+    transform: translateY(2000%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(8px);
+    transform: translateY(3000%);
+  }
+}
+
+@keyframes spin_bouncer {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0.3);
+  }
+}
+
+.field__bouncer .field-ball {
+  animation-duration: 2s;
+  animation-name: bounce_bouncer, bowl_bouncer, spin_bouncer;
+}
+
+.field__bouncer .field-ball::before {
+  animation-name: shadow_bouncer;
+  animation-duration: 2s;
+}
+
+
+
+/*
+======================================== 
+Beamer
+========================================
+*/
+
+
+@keyframes bowl_beamer {
+  0% {
+    left: 26%;
+  }
+  100% {
+    left: 46%;
+  }
+}
+
+@keyframes bounce_beamer {
+  0% {
+    top: 81%;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow_beamer {
+  0% {
+    opacity: 1;
+    filter: blur(6px);
+    transform: translateY(2000%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(3px);
+    transform: translateY(1600%);
+  }
+}
+
+@keyframes spin_beamer {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.3);
+  }
+}
+
+.field__beamer .field-ball {
+  animation-duration: 2s;
+  animation-name: bounce_beamer, bowl_beamer, spin_beamer;
+}
+
+.field__beamer .field-ball::before {
+  animation-name: shadow_beamer;
+  animation-duration: 2s;
+}
+
+
+/*
+======================================== 
+Yorker
+========================================
+*/
+
+
+@keyframes bowl_yorker {
+  0% {
+    left: 26%;
+  }
+  90% {
+    left: 46%;
+  }
+  100% {
+    left: 46%;
+  }
+}
+
+@keyframes bounce_yorker {
+  0% {
+    top: 81%;
+  }
+  90% {
+    top: 10%;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow_yorker {
+  0% {
+    opacity: 1;
+    filter: blur(6px);
+    transform: translateY(2000%);
+  }
+  90% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(2px);
+    transform: translateY(100%);
+  }
+}
+
+@keyframes spin_yorker {
+  0% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(0.3);
+  }
+}
+
+.field__yorker .field-ball {
+  animation-duration: 2s;
+  animation-name: bounce_yorker, bowl_yorker, spin_yorker;
+}
+
+.field__yorker .field-ball::before {
+  animation-name: shadow_yorker;
+  animation-duration: 2s;
+}
+
+
+/*
+======================================== 
+Inswinger
+========================================
+*/
+
+
+@keyframes bowl_inswinger {
+  0% {
+    left: 26%;
+    animation-timing-function: ease-out;
+  }
+  40% {
+    left: 28%;
+    animation-timing-function: ease-in;
+  }
+  80% {
+    left: 40%;
+  }
+  100% {
+    left: 48%;
+  }
+}
+
+@keyframes bounce_inswinger {
+  0% {
+    top: 81%;
+    animation-timing-function: ease-out;
+  }
+  80% {
+    top: 15%;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow_inswinger {
+  0% {
+    opacity: 1;
+    filter: blur(6px);
+    transform: translateY(2000%);
+  }
+  80% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(2px);
+    transform: translateY(800%);
+  }
+}
+
+@keyframes spin_inswinger {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(0.3);
+  }
+}
+
+.field__inswinger .field-ball {
+  animation-duration: 2s;
+  animation-name: bounce_inswinger, bowl_inswinger, spin_inswinger;
+}
+
+.field__inswinger .field-ball::before {
+  animation-name: shadow_inswinger;
+  animation-duration: 2s;
+}
+
+/*
+======================================== 
+Outswinger
+========================================
+*/
+
+@keyframes bowl_outswinger {
+  0% {
+    left: 26%;
+    animation-timing-function: ease-out;
+  }
+  45% {
+    left: 40%;
+    animation-timing-function: ease-in;
+  }
+  80% {
+    left: 37%;
+  }
+  100% {
+    left: 32%;
+  }
+}
+
+@keyframes bounce_outswinger {
+  0% {
+    top: 81%;
+    animation-timing-function: ease-out;
+  }
+  80% {
+    top: 15%;
+  }
+  100% {
+    top: 1%;
+  }
+}
+
+@keyframes shadow_outswinger {
+  0% {
+    opacity: 1;
+    filter: blur(6px);
+    transform: translateY(2000%);
+  }
+  80% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(2px);
+    transform: translateY(800%);
+  }
+}
+
+@keyframes spin_outswinger {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(0.3);
+  }
+}
+
+.field__outswinger .field-ball {
+  animation-duration: 2s;
+  animation-name: bounce_outswinger, bowl_outswinger, spin_outswinger;
+}
+
+.field__outswinger .field-ball::before {
+  animation-name: shadow_outswinger;
+  animation-duration: 2s;
 }
