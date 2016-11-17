@@ -48,7 +48,7 @@ Common Delivery Styles
   background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), red 50%) red;
   border-radius: 50%;
   height: 5vh;
-  left: 26%;
+  left: 30%;
   position: absolute;
   top: 81%;
   transform: translate(-50%, -50%);
@@ -83,15 +83,15 @@ Off Spin
 
 @keyframes bowl_offspin {
   0% {
-    left: 26%;
+    left: 42%;
     animation-timing-function: ease-out;
   }
   75% {
-    left: 36%;
+    left: 45%;
     animation-timing-function: ease-out;
   }
   100% {
-    left: 46%;
+    left: 49%;
   }
 }
 
@@ -148,15 +148,15 @@ Leg Spin
 
 @keyframes bowl_legspin {
   0% {
-    left: 26%;
+    left: 40%;
     animation-timing-function: ease-out;
   }
   75% {
-    left: 50%;
+    left: 49%;
     animation-timing-function: ease-out;
   }
   100% {
-    left: 44%;
+    left: 46%;
   }
 }
 
@@ -213,15 +213,15 @@ Doosra
 
 @keyframes bowl_doosra {
   0% {
-    left: 26%;
+    left: 42%;
     animation-timing-function: ease-out;
   }
   75% {
-    left: 36%;
+    left: 45%;
     animation-timing-function: ease-out;
   }
   100% {
-    left: 33%;
+    left: 44%;
   }
 }
 
@@ -278,15 +278,15 @@ Top spinner
 
 @keyframes bowl_topspinner {
   0% {
-    left: 26%;
-    animation-timing-function: ease-out;
-  }
-  75% {
     left: 40%;
     animation-timing-function: ease-out;
   }
+  75% {
+    left: 45%;
+    animation-timing-function: ease-out;
+  }
   100% {
-    left: 44%;
+    left: 48%;
   }
 }
 
@@ -343,15 +343,15 @@ Slider
 
 @keyframes bowl_slider {
   0% {
-    left: 26%;
+    left: 42%;
     animation-timing-function: ease-out;
   }
   75% {
-    left: 40%;
+    left: 46%;
     animation-timing-function: ease-out;
   }
   100% {
-    left: 44%;
+    left: 48%;
   }
 }
 
@@ -409,13 +409,13 @@ Bouncer
 
 @keyframes bowl_bouncer {
   0% {
-    left: 26%;
+    left: 42%;
   }
   40% {
-    left: 36%;
+    left: 46%;
   }
   100% {
-    left: 46%;
+    left: 48%;
   }
 }
 
@@ -487,10 +487,10 @@ Beamer
 
 @keyframes bowl_beamer {
   0% {
-    left: 26%;
+    left: 42%;
   }
   100% {
-    left: 46%;
+    left: 48%;
   }
 }
 
@@ -545,13 +545,13 @@ Yorker
 
 @keyframes bowl_yorker {
   0% {
-    left: 26%;
+    left: 42%;
   }
   90% {
-    left: 46%;
+    left: 48%;
   }
   100% {
-    left: 46%;
+    left: 48%;
   }
 }
 
@@ -617,15 +617,15 @@ Inswinger
 
 @keyframes bowl_inswinger {
   0% {
-    left: 26%;
+    left: 43%;
     animation-timing-function: ease-out;
   }
   40% {
-    left: 28%;
+    left: 43%;
     animation-timing-function: ease-in;
   }
   80% {
-    left: 40%;
+    left: 46%;
   }
   100% {
     left: 48%;
@@ -693,18 +693,18 @@ Outswinger
 
 @keyframes bowl_outswinger {
   0% {
-    left: 26%;
+    left: 44%;
     animation-timing-function: ease-out;
   }
   45% {
-    left: 40%;
+    left: 48%;
     animation-timing-function: ease-in;
   }
   80% {
-    left: 37%;
+    left: 46%;
   }
   100% {
-    left: 32%;
+    left: 44%;
   }
 }
 
